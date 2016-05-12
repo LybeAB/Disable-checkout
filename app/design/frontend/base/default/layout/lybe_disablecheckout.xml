@@ -1,0 +1,46 @@
+<layout version="0.1.0">
+
+    <catalog_product_view translate="label">
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/disable-checkout.css</name>
+            </action>
+        </reference>
+        <reference name="product.info">
+            <remove name="product.info.addtocart" />
+        </reference>
+    </catalog_product_view>
+
+    <wishlist_index_index translate="label">
+        <reference name="customer.wishlist.buttons" >
+            <remove name="customer.wishlist.button.toCart" />
+        </reference>
+    </wishlist_index_index>
+
+    <customer_account translate="label">
+        <reference name="left">
+            <!--Unset the whole block then add back later-->
+            <action method="unsetChild"><name>customer_account_navigation</name></action>
+            <block type="customer/account_navigation" name="customer_account_navigation" before="-" template="customer/account/navigation.phtml">
+                <action method="addLink" translate="label" module="customer"><name>account</name><path>customer/account/</path><label>Account Dashboard</label></action>
+                <action method="addLink" translate="label" module="customer"><name>account_edit</name><path>customer/account/edit/</path><label>Account Information</label></action>
+                <action method="addLink" translate="label" module="customer"><name>address_book</name><path>customer/address/</path><label>Address Book</label></action>
+                <action method="addLink" translate="label" module="review"><name>reviews</name><path>review/customer</path><label>My Product Reviews</label></action>
+                <action method="addLink" translate="label" module="wishlist" ifconfig="wishlist/general/active"><name>wishlist</name><path>wishlist/</path><label>My Favorite</label></action>
+                <action method="addLink" translate="label" module="newsletter"><name>newsletter</name><path>newsletter/manage/</path><label>Newsletter Subscriptions</label></action>
+            </block>
+            <remove name="catalog.compare.sidebar"/>
+        </reference>
+    </customer_account>
+
+    <catalog_category_view>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/disable-checkout.css</name>
+            </action>
+        </reference>
+    </catalog_category_view>
+
+</layout>

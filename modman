@@ -1,0 +1,4 @@
+app/code/local/Lybe/DisableCheckout/ app/code/local/Lybe/DisableCheckout/
+app/design/frontend/base/default/layout/lybe_disablecheckout.xml app/design/frontend/base/default/layout/lybe_disablecheckout.xml
+app/etc/modules/Lybe_disablecheckout.xml app/etc/modules/Lybe_disablecheckout.xml
+skin/frontend/base/default/disable-checkout.css skin/frontend/base/default/disable-checkout.css
