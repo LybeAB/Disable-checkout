@@ -1,5 +1,10 @@
 <layout version="0.1.0">
 
+
+    <default>
+        <remove name="catalog_product_price_template" />
+    </default>
+    
     <catalog_product_view translate="label">
         <reference name="head">
             <action method="addItem">
@@ -15,6 +20,9 @@
     <wishlist_index_index translate="label">
         <reference name="customer.wishlist.buttons" >
             <remove name="customer.wishlist.button.toCart" />
+        </reference>
+        <reference name="customer.wishlist.items">
+            <remove name="customer.wishlist.item.cart" />
         </reference>
     </wishlist_index_index>
 
