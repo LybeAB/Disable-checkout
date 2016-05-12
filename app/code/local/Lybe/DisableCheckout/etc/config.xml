@@ -8,6 +8,13 @@
                 </rewrite>
             </catalog>
         </models>
+        <blocks>
+            <catalog>
+                <rewrite>
+                    <product_abstract>Lybe_DisableCheckout_Block_Product_Abstract</product_abstract>
+                </rewrite>
+            </catalog>
+        </blocks>
     </global>
     <frontend>
         <layout>
