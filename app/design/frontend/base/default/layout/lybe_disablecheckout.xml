@@ -3,15 +3,12 @@
 
     <default>
         <remove name="catalog_product_price_template" />
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/disable-checkout.css</stylesheet></action>
+        </reference>
     </default>
 
     <catalog_product_view translate="label">
-        <reference name="head">
-            <action method="addItem">
-                <type>skin_css</type>
-                <name>css/disable-checkout.css</name>
-            </action>
-        </reference>
         <reference name="product.info">
             <remove name="product.info.addtocart" />
         </reference>
@@ -41,14 +38,5 @@
             <remove name="catalog.compare.sidebar"/>
         </reference>
     </customer_account>
-
-    <catalog_category_view>
-        <reference name="head">
-            <action method="addItem">
-                <type>skin_css</type>
-                <name>css/disable-checkout.css</name>
-            </action>
-        </reference>
-    </catalog_category_view>
 
 </layout>
