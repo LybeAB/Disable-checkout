@@ -22,6 +22,7 @@
         <Mage_XmlConnect>
             <active>false</active>
         </Mage_XmlConnect>
+        <!-- active module -->
         <Lybe_disableCheckout>
             <active>true</active>
             <codePool>local</codePool>
